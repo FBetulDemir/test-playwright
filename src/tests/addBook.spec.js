@@ -14,6 +14,7 @@ test.describe('Reading list - Add Book', () => {
         await expect(titleInput).toBeVisible();
 		await expect(authorInput).toBeVisible();
 
+		//here filling the form with book title and author name to check if it is added when clicked submit
 		await titleInput.fill('Glukosrevolutionen : balansera ditt blodsocker och förändra ditt liv')
 		await authorInput.fill('Jessie Inchauspé')
 
