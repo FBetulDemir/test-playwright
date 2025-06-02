@@ -1,12 +1,17 @@
-# React + Vite
+Navigering
+Som en användare vill jag kunna klicka på knapparna Katalog, Lägg till bok och Mina böcker, så att jag kan navigera mellan sidans funktioner.
+Testad i navigation.spec.js
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Lägga till bok
+Som en användare vill jag kunna lägga till en ny bok med titel och författare, så att den visas i katalogen.
+Testad i addBook.spec.js
 
-Currently, two official plugins are available:
+Som en användare vill jag kunna se den bok jag just har lagt till, så att jag vet att den sparats korrekt.
+Testad i addBook.spec.js
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Favoritmarkera böcker
+Som en användare vill jag kunna klicka på hjärtat bredvid en bok i katalogen, så att jag markerar den som favorit.
+Testad i favoriteBook.spec.js
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Som en användare vill jag kunna se alla böcker jag har favoritmarkerat under fliken Mina böcker, så att jag enkelt hittar dem igen.
+Testad i favoriteBook.spec.js
