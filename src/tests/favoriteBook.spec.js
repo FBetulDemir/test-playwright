@@ -14,13 +14,30 @@ test.describe('Reading list', () => {
 
 		const starBtn = page.getByTestId('star-Hur man tappar bort sin TV-fjärr 10 gånger om dagen')
 		await starBtn.click()
-		await expect(starBtn).toBeVisible()
 
 		await page.getByRole('button', { name: 'Mina böcker' }).click()
 
 
 		const favoriteBook = page.getByTestId('fav-Hur man tappar bort sin TV-fjärr 10 gånger om dagen')
 		await expect(favoriteBook).toBeVisible()
+	})
+
+	test('unclick on the heart next to the favorited book to remove it from favorites and see if unfavorited book dissappears in "Mina böcker"', async ({ page }) => {
+
+		const starBtn = page.getByTestId('star-Hur man tappar bort sin TV-fjärr 10 gånger om dagen')
+		await starBtn.click()
+
+		await page.getByRole('button', { name: 'Mina böcker' }).click()
+
+
+		const favoriteBook = page.getByTestId('fav-Hur man tappar bort sin TV-fjärr 10 gånger om dagen')
+		await expect(favoriteBook).toBeVisible()
+
+		await page.getByRole('button', { name: 'Katalog' }).click()
+		await starBtn.click() //unclicking here
+
+		await page.getByRole('button', { name: 'Mina böcker' }).click()
+		await expect(favoriteBook).not.toBeVisible()
 	})
 
 
